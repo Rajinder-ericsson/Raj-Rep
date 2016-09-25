@@ -1,7 +1,4 @@
-# Raj-Rep
-# Raj-Rep
-# MakeCaccheMatrix funtion created below.
-MakeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         set <- function(y) {
                 x <<- y
@@ -17,8 +14,9 @@ MakeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function computes the inverse of the special "matrix" created by makeCacheMatrix above
-
+## This function computes the inverse of the special "matrix" created by 
+## makeCacheMatrix above. If the inverse has already been calculated (and the 
+## matrix has not changed), then it should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
@@ -32,4 +30,3 @@ cacheSolve <- function(x, ...) {
         x$setInverse(inv)
         inv
 }
-
